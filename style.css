@@ -1,9 +1,11 @@
 /*==== Box Sizing ====*/
+
 * {
     box-sizing: border-box;
 }
 
 /*==== Fonts ====*/
+
 @font-face{
     font-family: "titleFont";
     src: url("./fonts/BebasNeue-Regular.ttf"); /* TODO */
@@ -19,12 +21,7 @@
     */
 }
 
-table{
-    border-collapse: collapse;
-}
-table td{
-    border-bottom: 1px solid var(--c_back);
-}
+/*==== Default ====*/
 
 html{
     height: 100%;
@@ -35,65 +32,13 @@ html{
     /*color: rgba(1, 133, 82, 0.6); */
     color: var(--c_front);
 }
-
 body{
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
 }
 
-.content-box{
-    background-color: rgba(15, 36, 29, 0.2);
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--c_back);
-    border-radius: 5px;
-}
-
-.bottom-content{
-    background-color:  rgba(15, 36, 29, 0.2);
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--c_back);
-    border-radius: 5px;
-    margin: 5px;
-    text-align: center;
-}
-
-article{
-    margin: 0px;
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li a{
-    text-decoration: none;
-    border: 2px solid  var(--c_back);
-    border-radius: 5px;
-    display: block;
-    margin: 10px 0 0 10px;
-    overflow: hidden;
-    font-family: titleFont;
-    font-size: 2em;
-}
-a:visited{
-    color: var(--c_front);
-}
-
-a.active{
-    background-color:var(--c_front);
-    color: var(--c_back);
-}
+/*==== Header ====*/
 
 header{
     margin: 0;
@@ -104,11 +49,92 @@ header{
     padding: 5px;
     border-bottom: 2px solid var(--c_back);
 }
-
 header h1{
     text-align: center;
     font-family: titleFont;
     font-size: 4em;
+    letter-spacing: 5px;
+}
+
+/*==== Nav ====*/
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li a{
+    text-decoration: none;
+    border: 2px solid  var(--c_back);
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0 0 10px;
+    overflow: hidden;
+    font-family: titleFont;
+    font-size: 1.5em;
+}
+a{
+    color: var(--c_front);
+}
+a:visited{
+    color: var(--c_front);
+}
+a.active{
+    background-color:var(--c_front);
+    color: var(--c_back);
+}
+
+/*==== Content ====*/
+
+.content-box{
+    background-color: rgba(15, 36, 29, 0.2);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--c_back);
+    border-radius: 5px;
+}
+.bottom-content{
+    background-color:  rgba(15, 36, 29, 0.2);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--c_back);
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 1em;
+}
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+table td{
+    border-bottom: 1px solid var(--c_back);
+}
+article{
+    margin: 0px;
+}
+figure{
+    margin: 0;
+}
+figure.bottom-content{
+    padding: 20px;
+    
+}
+figcaption{
+    text-align: center;
+}
+figure img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+.emph{
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 input.inputField{
@@ -124,6 +150,7 @@ input.inputField{
 
 
 /*==== Galleria ====*/
+
 .galleria-container{
     margin: auto;
     max-width: 100%;
