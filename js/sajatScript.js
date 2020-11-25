@@ -1,4 +1,21 @@
-
+function showOpen()
+{
+    var table = document.getElementById("opening");
+    var today = new Date();
+    var d = today.getDay()-1;
+    var currentTime = today.getHours();
+    var start = parseInt(table.rows[d].cells[1].innerHTML.split(':')[0]);
+    var end = parseInt(table.rows[d].cells[3].innerHTML.split(':')[0]);
+    if(currentTime > start && currentTime < end){
+        table.rows[d].style.backgroundColor =  "green";
+        document.getElementById("openText").innerHTML = "Jelenleg nyitva vagyunk!";
+    }
+    else{
+        table.rows[d].style.backgroundColor = "#BD2B2C";
+        table.rows[d].style.color = "#0f241d";
+        document.getElementById("openText").innerHTML = "Jelenleg zárva vagyunk!";
+    }
+}
 
 function setDates()
         {

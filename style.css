@@ -11,12 +11,19 @@
 
 :root{
     --c_front:  #BD2B2C;
-    --c_back:  rgba(15, 36, 29, 1);
+    --c_back: #0f241d;
     /*
     green_front: rgba(2, 176, 110, 0.9)
     green_back: rgba(15, 36, 29, 1)
     orange_front: #F48A4C
     */
+}
+
+table{
+    border-collapse: collapse;
+}
+table td{
+    border-bottom: 1px solid var(--c_back);
 }
 
 html{
