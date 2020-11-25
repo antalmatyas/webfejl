@@ -8,56 +8,95 @@
     <meta name="keywords" content=" --- KEYWORDS --- "> <!-- TODO -->
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href=" --- FAVICON --- "> <!-- TODO -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/galleria-1.6.1/dist/galleria.js"></script>
     <script src="./js/galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script src="./js/sajatScript.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('#images').galleria({
-                width: 500, 
-                height:500
+                width: 500,
+                height: 500
             });
         });
     </script>
     <script src="./js/jquery-validation-1.19.2/dist/jquery.validate.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('#valform').validate({
-
+                rules: {
+                    nameField: {required: true},
+                    dateField: {required: true},
+                    emailField: {
+                        required: true,
+                        email: true
+                    },
+                    eatDrink: "required"
+                },
+                messages:{
+                    nameField: "Kérem adja meg a nevét!",
+                    dateField: "Kérem adja meg a foglalás dátumát!",
+                    emailField: {
+                        required: "Kérem adja meg az email címét!",
+                        email: "Kérem valós email címet adjon meg!"
+                    },
+                    eatDrink: "Kérem válasszon!"
+                }
             });
         });
     </script>
+    
     <title>Cím</title>
 </head>
 
-<body>
-        <header>
-            <h1 class="titletext">Tüdőrák</h1>
-        </header>
+<body  onload="setDates()">
+    <header>
+        <h1 class="titletext">Tüdőrák</h1>
+    </header>
     <div class="row">
         <nav class="col-2 col-t-12 ">
             <ul id="menu">
                 <li><a href="index.html" class="active">Bemutatkozás</a></li>
                 <li><a href="">Asztalfoglalás</a></li>
                 <li><a href="">Képgaléria</a></li>
-                <li><a href="">asdasdasd</a></li>
+                <li><a href="">Nyitvatartás</a></li>
                 <li><a href="">asdasdasd</a></li>
             </ul>
         </nav>
         <div class="col-10 col-t-12">
             <article id="images" class="content-box">
-                <img src="./images/fr/1.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/2.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/3.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/4.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/5.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/6.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/7.jpg" alt="qrqr" title="sada">
-                <img src="./images/fr/8.jpg" alt="qrqr" title="sada">
+                <img src="./images/gallery/g_img_01.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_02.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_03.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_04.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_05.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_06.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_07.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+                <img src="./images/gallery/g_img_08.jpg" alt="Kép a teázóról" title="Teázónk képeken">
+
+                
                 <h1>asdasd</h1>
                 <p>tartalom</p>
-                
+            </article>
+            <article>
+                <form action="http://szamtud.uni-corvinus.hu/~blang/receive.php" method="POST" id="valform"
+                    novalidate="novalidate">
+                    <label for="name">Név: </label>
+                    <input type="text" name="nameField" id="name" class="inputField"><br>
+                    <label for="date">Dátum: </label>
+                    <input type="date" name="dateField" id="date" class="inputField"><br>
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="emailField" id="email" class="inputField"><br>
+                    <label for="drink">Csak tea: </label>
+                    <input type="radio" name="eatDrink" value="drink" id="drink"><br>
+                    <label for="eat">Tea + egyéb: </label>
+                    <input type="radio" name="eatDrink" value="eat" id="eat"><br>
+                    <input type="submit" value="Foglalás" class="inputField">
+                    <input type="reset" value="Törlés" class="inputField">
+                </form>
             </article>
         </div>
     </div>

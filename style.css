@@ -5,7 +5,7 @@
 
 /*==== Fonts ====*/
 @font-face{
-    font-family: "matyofont";
+    font-family: "titleFont";
     src: url("./fonts/BebasNeue-Regular.ttf"); /* TODO */
 }
 
@@ -27,17 +27,16 @@ html{
     background-size: cover;
     /*color: rgba(1, 133, 82, 0.6); */
     color: var(--c_front);
-    font-size: 2em;
 }
 
 body{
-    font-family: matyofont;
     margin: 0;
     padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 .content-box{
-    background-color: rgba(24, 18, 74, 0.2);
+    background-color: rgba(15, 36, 29, 0.2);
     border-style: solid;
     border-width: 2px;
     border-color: var(--c_back);
@@ -45,7 +44,7 @@ body{
 }
 
 .bottom-content{
-    background-color: rgba(24, 18, 74, 0.2);
+    background-color:  rgba(15, 36, 29, 0.2);
     border-style: solid;
     border-width: 2px;
     border-color: var(--c_back);
@@ -68,15 +67,17 @@ nav ul li{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 80%;
 }
 
 li a{
     text-decoration: none;
     border: 2px solid  var(--c_back);
+    border-radius: 5px;
     display: block;
-    margin: 2px;
+    margin: 10px 0 0 10px;
     overflow: hidden;
+    font-family: titleFont;
+    font-size: 2em;
 }
 a:visited{
     color: var(--c_front);
@@ -99,7 +100,21 @@ header{
 
 header h1{
     text-align: center;
+    font-family: titleFont;
+    font-size: 4em;
 }
+
+input.inputField{
+    background-color:  rgba(15, 36, 29, 0.2);
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--c_back);
+    border-radius: 5px;
+    height: 3em;
+    color: white;
+    font-family: titleFont;
+}
+
 
 /*==== Galleria ====*/
 .galleria-container{
