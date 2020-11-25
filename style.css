@@ -1,0 +1,143 @@
+/*==== Box Sizing ====*/
+* {
+    box-sizing: border-box;
+}
+
+/*==== Fonts ====*/
+@font-face{
+    font-family: "matyofont";
+    src: url("./fonts/BebasNeue-Regular.ttf"); /* TODO */
+}
+
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    background: black;
+    background-size: cover;
+    /*color: rgba(1, 133, 82, 0.6); */
+    color: rgba(2, 176, 110, 0.9);
+}
+
+body{
+    font-family: matyofont;
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    
+}
+
+.content-box{
+    background-color: rgba(24, 18, 74, 0.2);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(15, 36, 29, 1);
+    border-radius: 5px;
+}
+
+
+article{
+    margin: 0px;
+}
+
+
+#menu{
+    margin-top: 10px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a{
+    text-decoration: none;
+    border: 2px solid  rgba(15, 36, 29, 1);
+    display: block;
+    margin: 2px;
+    font-size: 2vw;
+}
+a:visited{
+    color: rgba(2, 176, 110, 0.9);
+}
+
+a.active{
+    background-color: rgba(2, 176, 110, 0.9);
+    color: rgba(15, 36, 29, 1);
+}
+
+header{
+    margin: 0;
+    background-image: url("./images/header_test2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 5px;
+    border-bottom: 2px solid  rgba(15, 36, 29, 1);
+}
+
+header h1{
+    text-align: center;
+}
+
+/*==== Galleria ====*/
+.galleria-container{
+    margin: auto;
+    max-width: 100%;
+}
+.galleria-theme-classic{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/*==== RESPONSIVE ====*/
+
+[class*="col-"] { /*mobile first*/
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media only screen and (min-width: 600px) {
+    /* tablet */
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* számítógép */
+    .col-half {width: 4.17%}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
