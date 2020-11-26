@@ -14,7 +14,7 @@
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/sajatScript.js"></script>
     <script src="./js/jquery-validation-1.19.2/dist/jquery.validate.min.js"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function () {
             $('#valform').validate({
                 rules: {
@@ -42,43 +42,59 @@
     <title>Po Teaház</title>
 </head>
 
-<body onload="showOpen()">
+<body onload="setDates()">
     <header>
         <h1>Po teaház</h1>
     </header>
     <div class="row">
         <nav class="col-2 col-t-12 ">
             <ul id="menu">
-                <li><a href="#" class="active">Bemutatkozás</a></li>
+                <li><a href="./index.html">Bemutatkozás</a></li>
                 <li><a href="./tearol.html">A teáról</a></li>
-                <li><a href="./asztalfoglalas.html">Asztalfoglalás</a></li>
+                <li><a href="#" class="active">Asztalfoglalás</a></li>
                 <li><a href="./galeria.html">Képgaléria</a></li>
                 <li><a href="./nyitvatartas.html">Nyitvatartás</a></li>
             </ul>
         </nav>
         <div class="col-10 col-t-12">
+            <article class="content-box centered">
 
-            <article class="content-box">
-
-
-                <h1>asdasd</h1>
-                <p>tartalom</p>
-            </article>
-            <article>
+                <h2>Asztalfoglalás:</h2><br>
+                <p>Figyelem! Asztalfoglalás csak a következő 2 hétre lehetséges!</p>
                 <form action="http://szamtud.uni-corvinus.hu/~blang/receive.php" method="POST" id="valform"
                     novalidate="novalidate">
-                    <label for="name">Név: </label>
-                    <input type="text" name="nameField" id="name" class="inputField"><br>
-                    <label for="date">Dátum: </label>
-                    <input type="date" name="dateField" id="date" class="inputField"><br>
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="emailField" id="email" class="inputField"><br>
-                    <label for="drink">Csak tea: </label>
-                    <input type="radio" name="eatDrink" value="drink" id="drink"><br>
-                    <label for="eat">Tea + egyéb: </label>
-                    <input type="radio" name="eatDrink" value="eat" id="eat"><br>
-                    <input type="submit" value="Foglalás" class="inputField">
-                    <input type="reset" value="Törlés" class="inputField">
+                    <table id="booking">
+                        <tr>
+                            <td><label for="name">Név: &nbsp;</label></td>
+                            <td><input type="text" name="nameField" id="name" class="inputField"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><label for="date">Dátum: &nbsp;</label><br><br></td>
+                            <td><input type="date" name="dateField" id="date" class="inputField"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-mail: &nbsp;</label></td>
+                            <td><input type="email" name="emailField" id="email" class="inputField"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><label for="drink">Csak tea: &nbsp;</label></td>
+                            <td><input type="radio" name="eatDrink" value="drink" id="drink"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><label for="eat">Tea + egyéb: &nbsp;</label></td>
+                            <td><input type="radio" name="eatDrink" value="eat" id="eat"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="centered"><input type="submit" value="Foglalás" class="inputField">
+                            <input type="reset" value="Törlés" class="inputField"></td>
+
+                        </tr>
+                    </table>
                 </form>
             </article>
         </div>
@@ -99,7 +115,7 @@
                     <img src="./images/map.jpg" alt="Elhelyezkedés a térképen">
                     <figcaption>Helyünk a térképen</figcaption>
                 </figure>
-
+            </div>
         </footer>
     </div>
 </body>

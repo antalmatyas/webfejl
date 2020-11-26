@@ -1,0 +1,23 @@
+Oldal készítője: Antal Mátyás
+
+URL: http://www.web.uni-corvinus.hu/~jpwqqk
+
+Téma: Oldalam egy kevés képzelőerővel készített, békés képzeletbeli teaház oldala. A felhasználónak lehetősége van megismerni a teaházat, a tea történetét, valamint információt kapni, majd asztalt foglalni. 
+
+JavaScript kódok:
+1. Asztalfoglalás oldalon: A kód célja a Dátum input mező beállítása. JS segítségével módosítom a default dátumot, valamint a legkorábbi kiválasztható dátumot az aktuális napra, majd a legkésőbbi dátumot a két héttel későbbi napra állítom, ezt számítja ki a kód. 
+2. Nyitvatartás oldalon: Az oldal kiszínezi az aktuális nap sorát a táblázatban, amennyiben az adott időpontban a teázó nyitva van, zöldre, ha nem, piros színűre, majd kírja az eredményt a táblázat alá is. A kód működik a táblázatban a nyitvatartási idők módosítása esetén is. 
+
+Kódot illetve formázást egészében nem vettem át, helyenként használtam a w3schools oldalát, az ottani kódot mindig csak segítségképpen, megértve, majd módosítva alkalmaztam. 
+
+Fontok:
+1. Az oldal címéhez illetve a navigációs menühöz a "BebasNeue-Regular" fonttípust használtam. (https://www.1001freefonts.com/bebas-neue.font)
+2. Az oldal tartalmához az "Oswald" google fontot használtam. (https://fonts.google.com/specimen/Oswald)
+
+Űrlapelemek:
+Az asztalfoglalás oldalon használtam a html5 űrlapelemek közül az email valamint a date típusú inputokat. 
+
+Források:
+map: https://hu.pinterest.com/pin/859413541364903389/
+képek: https://www.artstation.com/adrienbrooks
+tea: https://hu.wikipedia.org/wiki/Tea_(ital)
